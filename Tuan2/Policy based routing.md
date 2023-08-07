@@ -1,0 +1,15 @@
+## Policy based routing
+- *Policy-Based Routing (PBR)* - Định tuyến dựa trên chính sách, là một kỹ thuật trong mạng máy tính cho phép định tuyến các gói tin dựa trên các chính sách được xác định trước thay vì định tuyến dựa trên các thông số thông thường như địa chỉ IP nguồn và đích
+- PBR cho phép người quản trị mạng thực hiện điều chỉnh cụ thể trên đường đi của gói tin dựa trên nhu cầu kỹ thuật, yêu cầu kinh doanh hoặc các tiêu chí chính sách khác
+- Cách thức hoạt động của Policy-Based Routing
+  - Khi một gói tin đến thiết bị mạng, PBR sẽ kiểm tra các chính sách được định nghĩa trước trong bảng định tuyến (route-map). Các chính sách này có thể được cấu hình để kiểm tra các thông tin trong tiêu đề gói tin (như địa chỉ nguồn, địa chỉ đích, giao thức, cổng, dịch vụ, v.v...) hoặc các thuộc tính khác của gói tin
+  - Dựa trên kết quả kiểm tra, PBR sẽ định tuyến gói tin theo một tuyến đường được xác định trước trong bảng định tuyến
+  - PBR thường được áp dụng cho các gói tin đặc biệt mà không ảnh hưởng đến định tuyến chính thức của mạng. Các chính sách PBR chỉ được áp dụng khi các điều kiện xác định trước được thỏa mãn, còn các gói tin khác sẽ tuân theo quy tắc định tuyến thông thường
+- Ưu điểm của Policy-Based Routing:
+  - PBR cho phép quản trị viên mạng kiểm soát đường đi của các gói tin dựa trên các chính sách cụ thể, giúp tối ưu hóa đường đi dựa trên nhu cầu của mạng
+  - PBR cung cấp tính linh hoạt trong việc điều chỉnh các định tuyến dựa trên các tiêu chí cụ thể, giúp tùy chỉnh mạng một cách chi tiết.
+  - PBR cho phép ưu tiên các loại lưu lượng cụ thể, như ưu tiên cho lưu lượng video, giảm độ trễ cho lưu lượng đáng tin cậy, v.v...
+- Nhược điểm của Policy-Based Routing:
+  - Cấu hình PBR có thể phức tạp và yêu cầu kiến thức sâu về định tuyến và chính sách mạng.
+  - PBR thường được áp dụng tại các điểm cụ thể trong mạng và không phù hợp với các mạng lớn và phức tạp với nhiều điểm kết nối.
+  - Khi áp dụng các chính sách phức tạp, thiết bị mạng có thể tốn nhiều tài nguyên xử lý, làm giảm hiệu suất của thiết bị 
