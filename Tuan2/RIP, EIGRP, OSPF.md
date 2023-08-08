@@ -1,5 +1,5 @@
 - [Kiến thức về layer 3 router, Định tuyến và các giao thức định tuyến (RIP, EIGRP,OSPF, BGP). So sánh RIP, EIGRP, OSPF](#kiến-thức-về-layer-3-router-định-tuyến-và-các-giao-thức-định-tuyến-rip-eigrpospf-bgp-so-sánh-rip-eigrp-ospf)
-  - [1. Layer 3 router](#1-layer-3-router)
+  - [1. Switch Layer 3](#1-switch-layer-3)
   - [2. Định tuyến và các giao thức định tuyến](#2-định-tuyến-và-các-giao-thức-định-tuyến)
     - [2.1 RIP](#21-rip)
     - [2.2 EIGRP](#22-eigrp)
@@ -10,7 +10,26 @@
 
 
 ## Kiến thức về layer 3 router, Định tuyến và các giao thức định tuyến (RIP, EIGRP,OSPF, BGP). So sánh RIP, EIGRP, OSPF
-### 1. Layer 3 router
+### 1. Switch Layer 3 
+- Switch Layer 3 là thiết bị kết hợp chức năng của switch và router, là thiết bị chuyển mạch, hoạt động như một công tắc để kết nối các thiết bị trong cùng một hệ thống mạng LAN ảo (VLAN) với tốc độ rất nhanh và được tích hợp trí thông minh định tuyến IP. Nhờ vậy mà Switch Layer 3 có thể tăng gấp đôi vai trò của một bộ định tuyến thông thường
+- Thiết bị chuyển mạch Switch Layer 3 có thể hỗ trợ thực hiện các giao thức định tuyến như kiểm tra gói thông tin, luân chuyển hoặc đưa ra những quyết định định tuyến dựa trên các địa chỉ nguồn và đích được chỉ định sẵn
+- Switch Layer 3 sẽ xử lý lưu lượng trong mạng truyền số liệu và sử dụng bộ giao thức IP nhằm đảm bảo các loại lưu lượng có yêu cầu chất lượng dịch vụ khác nhau được đối xử ưu tiên theo thứ tự quan trọng
+- Chức năng của Switch Layer 3
+ - Switch Layer 3 có khả năng thực hiện định tuyến router để liên thông với các mạng con khác và cũng có thể liên thông với các mạng con trong hệ thống mạng ảo VLANs
+ - Switch Layer 3 cũng được hỗ trợ để truyền tải tập tin được đảm bảo an toàn gần như tuyệt đối. Trong quá trình truyền tải tập tin đến đúng thời điểm và địa chỉ đã được định sẵn trong các gói tập tin, người dùng có thể hạn chế hoàn toàn những rủi ro có thể gặp phải khi có các truy cập ngoài quyền kết nối
+ - Switch Layer 3 có thể kiểm soát và xử lý các trường hợp tắc nghẽn băng thông. Khi mức sử dụng băng thông tăng lên trong mạng và các cổng SFP 1G được sử dụng cho các công suất tối đa của một thiết bị thì không thể dựa vào các liên kết module quang 1G để xử lý việc di chuyển các gói tập tin này trên hệ thống mạng
+ - Switch Layer 3 có khả năng hỗ trợ thực hiện việc xây dựng các bảng tổng hợp có liên quan đến những gói thông tin. Từ đó đảm bảo trong quá trình truyền tin sẽ không xảy ra nhầm lẫn địa chỉ chuyển đến đúng địa chỉ theo yêu cầu của người dùng. Các thiết bị Switch sẽ nhận dữ liệu từ các cổng port được chuyển từ các máy tính trong hệ thống
+ - Switch Layer 3 có thể chia nhỏ hệ thống mạng LAN thành các hệ thống mạng LAN thành segment nhỏ hơn để các thiết bị có thể kết nối một cách dễ dàng hơn. Nhờ có tác dụng này, Switch Layer 3 sẽ giảm thiểu những miền đụng độ
+- Ưu điểm của Switch Layer 3:
+  - Hiệu suất cao: Switch Layer 3 thường có hiệu suất xử lý cao hơn so với router truyền thống. Với khả năng xử lý định tuyến ở tốc độ dây, switch Layer 3 có thể xử lý lưu lượng mạng lớn mà không gây gián đoạn
+  - Tối ưu hóa lưu lượng mạng: Switch Layer 3 có thể xử lý các gói tin ở cả lớp 2 và lớp 3, giúp tối ưu hóa lưu lượng mạng và giảm thiểu lưu lượng chuyển đổi giữa các VLAN
+  - Switch Layer 3 có thể hỗ trợ cân bằng tải giữa các cổng và định tuyến trên các đường dẫn khác nhau, giúp tăng cường hiệu suất mạng
+  - Switch Layer 3 có thể quản lý bằng các giao thức định tuyến phổ biến như RIP, OSPF, EIGRP, v.v... giúp quản trị viên mạng dễ dàng cấu hình và duy trì mạng.
+  
+- Nhược điểm của Switch Layer 3:
+  - Một số switch Layer 3 có khả năng mở rộng hạn chế, đặc biệt là trong các mạng lớn và phức tạp với nhiều VLAN và lưu lượng mạng cao
+  - Khi xảy ra sự cố trong switch Layer 3, nó có thể làm gián đoạn toàn bộ lưu lượng mạng trong các VLAN liên quan
+  - Một số switch Layer 3 có thể không tương thích hoặc hỗ trợ tốt với một số giao thức định tuyến, đòi hỏi sự tùy chỉnh cấu hình để hoạt động ổn định.
 ### 2. Định tuyến và các giao thức định tuyến
 - Định tuyến gồm: Định tuyến tĩnh và định tuyến động
   - Định tuyến tĩnh: phù hợp các mạng cỡ nhỏ ( dưới 15 route)
