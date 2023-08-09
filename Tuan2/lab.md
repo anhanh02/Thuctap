@@ -1,9 +1,13 @@
 
 
 ## Thực hành LAB:
+- Sơ đồ cấu hình :
+  
+![alt](image/lab.png)
+
 ### 1. Cấu hình LACP 
 
-![alt](image/lab.png)
+
 - SW RUCKUS
   
   ![alt](image/swr_lacp.png)
@@ -41,9 +45,20 @@
   
   ![alt](image/pc0_si.png)
 
+### 3. Cấu hình dự phòng gateway HSPR/VRRP/GLBP.
+- Thực hiện cấu hình dự phòng HSPR cho Router
+  - Chọn g0/0.10 làm master, g0/0.20 và g0/0.30 dự phòng
+  
+  ![alt](image/hsrp-lab.png)
+
+  - Kiểm tra kết quả
+    > FW#show standby brief
+
+    ![alt](image/hsrp-lab2.png)
 
 
-### 3. Cấu hình định tuyến OSPF, BGP
+
+### 4. Cấu hình định tuyến OSPF, BGP
 - Sơ đồ cấu hình 
 
   ![alt](image/lab-bgp.png)
@@ -85,8 +100,3 @@
 
 
 
-### 4. Cấu hình port-channel, Virtual port channel/MLAG
-### 5. Cấu hình ACCESS-LIST
-- 
-### 6. Cấu hình Policy Based Routing
-### 7. Cấu hình dự phòng gateway HSPR/VRRP/GLBP.
