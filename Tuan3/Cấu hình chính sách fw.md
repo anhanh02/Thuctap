@@ -1,4 +1,16 @@
-## Cấu hình chính sách fw:RDP, SMB, FTP, HTTP, DNS,SSH, HTTPS, HCP, NTP
+- [Cấu hình chính sách fw:RDP, SMB, FTP, HTTP, DNS,SSH, HTTPS, DHCP, NTP](#cấu-hình-chính-sách-fwrdp-smb-ftp-http-dnsssh-https-dhcp-ntp)
+  - [1. Cấu hình FW](#1-cấu-hình-fw)
+  - [2. Cấu hình chính sách fw: RDP](#2-cấu-hình-chính-sách-fw-rdp)
+  - [3. Cấu hình chính sách fw: SMB](#3-cấu-hình-chính-sách-fw-smb)
+  - [4. Cấu hình chính sách fw: FTP](#4-cấu-hình-chính-sách-fw-ftp)
+  - [5. Cấu hình chính sách fw: HTTP, HTTPS](#5-cấu-hình-chính-sách-fw-http-https)
+  - [6. Cấu hình chính sách fw: DNS](#6-cấu-hình-chính-sách-fw-dns)
+  - [7. Cấu hình chính sách fw: SSH](#7-cấu-hình-chính-sách-fw-ssh)
+  - [8. Cấu hình chính sách fw: DHCP](#8-cấu-hình-chính-sách-fw-dhcp)
+  - [9. Cấu hình chính sách fw: NTP](#9-cấu-hình-chính-sách-fw-ntp)
+
+
+## Cấu hình chính sách fw:RDP, SMB, FTP, HTTP, DNS,SSH, HTTPS, DHCP, NTP
 ### 1. Cấu hình FW
 - Sơ đồ: 
 
