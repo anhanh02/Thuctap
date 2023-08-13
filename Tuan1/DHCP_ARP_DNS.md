@@ -17,7 +17,7 @@
     - Thường chỉ được sử dụng tại các hộ gia đình hoặc mô hình mạng nhỏ
 - Các bản tin trao đổi của DHCP
   ![alt](Image/image1.png)
-  -Cơ chế hoạt động 
+  - Cơ chế hoạt động 
     - DHCP Client gửi gói tin `DHCP DISCOVER` dạng broadcast đến DHCP Server
     - DHCP Server gửi gói tin `DHCP OFFER` dạng broadcast đến DHCP Client
     - DHCP Client gửi gói tin `DHCP REQUEST` dạng broadcast đến DHCP Server
@@ -27,9 +27,9 @@
   - **DHCP OFFER:**
     - Bản tin Offer chứa thông tin địa chỉ IP mà máy chủ đề xuất cấp phát cho máy khách, thời gian thuê địa chỉ, subnet mask, địa chỉ broadcast và thông tin cấu hình mạng khác
   - **DHCP REQUEST:**
-    - 
+    - là gói tin được DHCP client phản hồi với máy chủ sau khi nhận được DHCP Offer để thể hiện sự chấp nhận đối với địa chỉ IP.
   - **DHCP ACKNOWLEDGE:** 
-    - 
+    - Là một gói tin được DHCP server gửi đến cho Client để xác thực việc chấp nhận DHCP Request và định hướng các tham số tùy chọn cho phép Client tham gia mạng TCP/IP và hoàn thành hệ thống khởi động.
     - Bản tin Acknowledge chứa thông tin xác nhận rằng địa chỉ IP đã được cấp phát cho máy khách, cùng với các cấu hình mạng bổ sung như địa chỉ gateway, DNS và các thông số khác
   - Nếu DHCP Server và DHCP Client nằm khác miền quảng bá, thì cần thiết phải sử dụng một thiết bị trung gian để chuyển tiếp yêu cầu từ Client đến Server. Vì trong trường hợp này các gói tin(local) broadcast từ Client bị Router chặn nên sẽ không đến được DHCP Server
 

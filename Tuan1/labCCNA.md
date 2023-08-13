@@ -72,7 +72,7 @@
   ```
     
 
-    ![alt](Image/vtp_server.png)
+  ![alt](Image/vtp_server.png)
   - Cấu hình các sw khác là client
     - Thiết lập VTP domain: networks
     > Switch(config)#vtp domain networks
