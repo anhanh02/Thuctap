@@ -20,9 +20,6 @@
 - Mô tả:
   - Sử dụng dây cáp để kết nối console máy tính với thiết bị APV 
   - Cấu hình interface management 
-- Chuẩn bị: 
-  - 01 laptop cài phần mềm putty
-  - 01 Dây console
 - Các bước thực hiện:
   - Kết nối máy tính với APV bằng dây console
   - Đăng nhập vào giao diện APV/Cli bằng account: 
