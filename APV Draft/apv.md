@@ -40,6 +40,7 @@ AN(config)#ip address "port1" 192.168.30.49  255.255.255.0
 #### 2. Cấu hình Default Route
 - Mục đích	Kiểm tra cấu hình default route 
 - Mô hình:
+    ![alt](image/image1.png)
 - Mô tả:
   -	Sử dụng Static routing giữa thiết bị APV và Firewall quảng bá vùng mạng Lan (vlan 30) của Firewall với vùng Web-Server của thiết bị APV
   -	Kiểm tra ping giữa Laptop và Server
@@ -48,17 +49,20 @@ AN(config)#ip address "port1" 192.168.30.49  255.255.255.0
   -	Cấu hình Static route trên Firewall
   -	Cấu hình Default route trên thiết bị APV
   - Từ giao diện webui của APV ta truy cập route/basic Routing/default Route, nhập destination IP (4) và chọn (5) để lưu cấu hình 
+    ![alt](image/img2.png)
   -	Kiểm tra ping và tracert route giữa laptop và Server
 - Kết quả:
   - Ping thành công từ laptop tới server
-    ![alt]
+    ![alt](image/img3.png)
+    ![alt](image/img4.png)
   - Ping thành công từ Server tới laptop 
-    ![alt]
+    ![alt](image/img5.png)
+    ![alt](image/img6.png)
 
 #### 3. Bật webui 
 - Mục đích: Kiểm tra cấu hình webui
 - Mô hình:
-    ![alt]
+    ![alt](image/img7.png)
 - Mô tả:
   -	Trên giao cli Console, bật tính năng webui
   -	Kết nối máy tính với Port1 của thiết bị APV
@@ -70,26 +74,26 @@ AN(config)#ip address "port1" 192.168.30.49  255.255.255.0
     > AN(config)#show webui settings
 - Kết quả	
   -	Kết quả kiểm tra trạng thái webui, webui đã bật và đang sử dụng port 8888
-    ![alt]
+    ![alt](image/img8.png)
   -	Kết nối thành công vào webui theo đường dẫn https://192.168.30.49:8888/login
-    ![alt]
+    ![alt](image/img9.png)
 
 #### 4. Cấu hình System Time Zone
 - Mục đích: Kiểm tra cấu hình System Time Zone
 - Mô hình:
-    ![alt]
+    ![alt](image/img10.png)
 - Mô tả:
   - Cấu hình đồng bộ timezone trên giao diện webui
 - Các bước thực hiện:
   -	Đăng nhập vào giao diện APV/webui bằng account: 
 Array/admin
   -	Từ giao diện webui => vào tab (1)System => chọn (2) general Setting => tùy chọn (3) múi giờ 
-    ![alt]
+    ![alt](image/img11.png)
   -	Đồng bộ System time theo timezone, chọn (1) cửa sổ mới hiện ra chọn (2) để đồng bộ System time theo time zone, lưu cấu hình thay đổi (3)
-    ![alt]
+    ![alt](image/img12.png)
 - Kết quả:
   - System time sau đã đồng bộ thành công với System time zone 
-    ![alt]
+    ![alt](image/img13.png)
 
 ### II. Server Load Balancing
 #### 1. Round Robin
